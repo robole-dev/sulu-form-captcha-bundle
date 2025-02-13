@@ -1,0 +1,14 @@
+<properties xmlns="http://schemas.sulu.io/template/template"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/properties-1.0.xsd">
+    <xi:include
+        href="../../../vendor/sulu/form-bundle/Resources/config/form-fields/header_without_required.xml"
+        xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)xpointer(//sulu:property)"
+    />
+    <property name="title" type="text_line">
+        <meta>
+            <title>sulu_form.title</title>
+        </meta>
+    </property>
+</properties>

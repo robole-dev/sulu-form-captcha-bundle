@@ -1,0 +1,4 @@
+{
+    "sulu_form_captcha_bundle.form.type.gregwar_captcha": "Captcha (Gregwar)",
+    "sulu_form_captcha_bundle.form.type.turnstile_captcha": "Captcha (Cloudfare Turnstile)"
+}

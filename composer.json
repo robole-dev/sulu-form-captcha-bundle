@@ -1,0 +1,42 @@
+{
+    "name": "robole/sulu-form-captcha-bundle",
+    "description": "@todo",
+    "type": "symfony-plugin",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Robole\\SuluFormCaptchaBundle\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "FlxRobole",
+            "email": "felix.saenger@robole.de"
+        }
+    ],
+    "homepage": "https://github.com/robole-dev/sulu-form-captcha-bundle",
+    "require": {
+        "php": "^8.2",
+        "jackalope/jackalope-doctrine-dbal": "*",
+        "sulu/form-bundle": "^2.5",
+        "symfony/config": "^6.0 | ^7.0",
+        "symfony/dependency-injection": "^6.0 | ^7.0",
+        "symfony/framework-bundle": "^6.0 | ^7.0"
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/flex": true,
+            "php-http/discovery": true
+        },
+        "sort-packages": true
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.68",
+        "gregwar/captcha-bundle": "^2.3",
+        "pixelopen/cloudflare-turnstile-bundle": "^0.4.1"
+    },
+    "scripts": {
+        "php-cs": "@php vendor/bin/php-cs-fixer fix --verbose --diff --dry-run",
+        "php-cs-fix": "@php vendor/bin/php-cs-fixer fix"
+    }
+}
