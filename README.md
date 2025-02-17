@@ -29,9 +29,11 @@ return [
 ### Use with Cloudflare Turnstile
 
 1. Install [PixelOpen Cloudflare Turnstile Bundle](https://github.com/Pixel-Open/cloudflare-turnstile-bundle):
-> composer require pixelopen/cloudflare-turnstile-bundle
+```console
+composer require pixelopen/cloudflare-turnstile-bundle
+```
 
-If not automagically done, add the bundle to your `config/bundles.php` file:
+Then, enable the bundle by adding it to the list of registered bundles in the `config/bundles.php` file of your project:
 
 ```php
 return [
@@ -52,9 +54,11 @@ For more information, refer to the [bundle repository](https://github.com/Pixel-
 ### Use with Gregwar Captcha
 
 1. Install [Gregwar CaptchaBundle](https://github.com/Gregwar/CaptchaBundle):
-> composer require gregwar/captcha-bundle
+```console
+composer require gregwar/captcha-bundle
+```
 
-If not automagically done, add the bundle to your `config/bundles.php` file:
+Then, enable the bundle by adding it to the list of registered bundles in the `config/bundles.php` file of your project:
 
 ```php
 return [
@@ -74,10 +78,14 @@ For more information on configuration and form theming, refer to the [bundle rep
 
 ### Use with Friendly Captcha
 
-__Attention:__ This bundle currently only supports Symfony 6 and Friendly Captcha v1!
+__Attention:__ This bundle currently only supports Symfony 6 and Friendly Captcha v1! Both, a PR for Symfony 7 compatibility and an information request about the future bundle development can be found in the bundle repository. 
 
 1. Install [CORS Friendly Captcha Bundle](https://github.com/cors-gmbh/friendly-captcha-bundle):
-> composer require cors/friendly-captcha-bundle
+```console
+composer require cors/friendly-captcha-bundle
+```
+
+Then, enable the bundle by adding it to the list of registered bundles in the `config/bundles.php` file of your project:
 
 ```php
 return [
@@ -96,12 +104,7 @@ cors_friendly_captcha:
 
 3. Import the widget via npm in your application or load from CDN, e.g. in `base.html.twig`:
 ```html
-  <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.module.min.js"
-      async
-      defer
-      ></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.module.min.js" async defer></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.min.js" async defer></script>
 ``` 
 
