@@ -24,18 +24,24 @@ class SuluFormCaptchaBundle extends AbstractBundle
             $loader->load('type_gregwar.xml');
         }
 
-        // @todo friendly captcha
+        if (class_exists(\CORS\Bundle\FriendlyCaptchaBundle\Form\Type\FriendlyCaptchaType::class)) {
+            $loader->load('type_friendly.xml');
+        }
     }
 
-    public function build(ContainerBuilder $container): void
+    public function prependExtension(ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
     {
-        parent::build($container);
-
-        $container->prependExtensionConfig('framework', [
+        $containerBuilder->prependExtensionConfig('framework', [
             'translator' => [
                 'paths' => [
                     '%kernel.project_dir%/vendor/robole/sulu-form-captcha-bundle/translations'
                 ],
+            ],
+        ]);
+
+        $containerBuilder->prependExtensionConfig('twig', [
+            'paths' => [
+                '%kernel.project_dir%/vendor/robole/sulu-form-captcha-bundle/Resources/views' => 'SuluFormCaptcha'
             ],
         ]);
     }
