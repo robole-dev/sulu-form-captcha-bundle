@@ -1,6 +1,6 @@
 {
     "name": "robole/sulu-form-captcha-bundle",
-    "description": "@todo",
+    "description": "Extension for SuluFormBundle that adds third-party captcha providers",
     "type": "symfony-plugin",
     "license": "MIT",
     "autoload": {
@@ -21,7 +21,9 @@
         "sulu/form-bundle": "^2.5",
         "symfony/config": "^6.0 | ^7.0",
         "symfony/dependency-injection": "^6.0 | ^7.0",
-        "symfony/framework-bundle": "^6.0 | ^7.0"
+        "symfony/framework-bundle": "^6.0 | ^7.0",
+        "symfony/translation": "^6.0 || ^7.0",
+        "twig/twig": "^1.41 || ^2.6 || ^3.0"
     },
     "config": {
         "allow-plugins": {
@@ -31,6 +33,7 @@
         "sort-packages": true
     },
     "require-dev": {
+        "cors/friendly-captcha-bundle": "^1.0",
         "friendsofphp/php-cs-fixer": "^3.68",
         "gregwar/captcha-bundle": "^2.3",
         "pixelopen/cloudflare-turnstile-bundle": "^0.4.1"
