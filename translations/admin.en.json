@@ -1,5 +1,6 @@
 {
-    "sulu_form_captcha_bundle.form.type.gregwar_captcha": "Captcha (Gregwar)",
-    "sulu_form_captcha_bundle.form.type.turnstile_captcha": "Captcha (Cloudfare Turnstile)",
-    "sulu_form_captcha_bundle.form.type.friendly_captcha": "Captcha (Friendly Captcha)"
+  "sulu_form_captcha_bundle.form.type.gregwar_captcha": "Captcha (Gregwar)",
+  "sulu_form_captcha_bundle.form.type.turnstile_captcha": "Captcha (Cloudfare Turnstile)",
+  "sulu_form_captcha_bundle.form.type.friendly_captcha": "Captcha (Friendly Captcha)",
+  "sulu_form_captcha_bundle.form.type.altcha_captcha": "Captcha (ALTCHA)"
 }

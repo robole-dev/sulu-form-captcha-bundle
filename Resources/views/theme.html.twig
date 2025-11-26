@@ -3,14 +3,21 @@
 {% block captcha_widget %}
     {% apply spaceless %}
         {{ form_label(form, label|default()) }}
-        <img src="{{ captcha_code }}" title="captcha" width="{{ captcha_width }}" height="{{ captcha_height }}" />
+        <img 
+            src="{{ captcha_code }}"
+            title="captcha"
+            alt="captcha"
+            width="{{ captcha_width }}"
+            height="{{ captcha_height }}"
+        />
         {{ form_widget(form) }}
     {% endapply %}
 {% endblock %}
 
 {%- block cors_friendly_catcha_type_row -%}    
     {{ form_label(form, label|default()) }}
-    <div class="frc-captcha"
+    <div 
+        class="frc-captcha"
         data-sitekey="{{ form.vars.sitekey }}"
         data-solution-field-name="{{ form.vars.full_name }}"
         {% for type, value in form.vars.friendly_captcha %}

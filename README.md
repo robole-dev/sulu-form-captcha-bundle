@@ -24,11 +24,12 @@ return [
 ];
 ```
 
-2. Install and configure one or mutiple captcha providers from below. Once installed, each provider can be selected in the Sulu form editor.   
+2. Install and configure one or mutiple captcha providers from below. Once installed, each provider can be selected in the Sulu form editor.
 
 ### Use with Cloudflare Turnstile
 
 1. Install [PixelOpen Cloudflare Turnstile Bundle](https://github.com/Pixel-Open/cloudflare-turnstile-bundle):
+
 ```console
 composer require pixelopen/cloudflare-turnstile-bundle
 ```
@@ -43,10 +44,11 @@ return [
 ```
 
 2. Visit Cloudfare, create a site key and secret key, save the keys to `.env` and link via service configuration in `config/packages/pixel_open_cloudlflare_turnstile.yaml`:
+
 ```yaml
 pixel_open_cloudflare_turnstile:
-    key: "%env(TURNSTILE_KEY)%"
-    secret: "%env(TURNSTILE_SECRET)%"
+  key: "%env(TURNSTILE_KEY)%"
+  secret: "%env(TURNSTILE_SECRET)%"
 ```
 
 For more information, refer to the [bundle repository](https://github.com/Pixel-Open/cloudflare-turnstile-bundle).
@@ -54,6 +56,7 @@ For more information, refer to the [bundle repository](https://github.com/Pixel-
 ### Use with Gregwar Captcha
 
 1. Install [Gregwar CaptchaBundle](https://github.com/Gregwar/CaptchaBundle):
+
 ```console
 composer require gregwar/captcha-bundle
 ```
@@ -67,7 +70,8 @@ return [
 ];
 ```
 
-2. Customize the global bundle configuration in `config/packages/gregwar_captcha.yaml`: 
+2. Customize the global bundle configuration in `config/packages/gregwar_captcha.yaml`:
+
 ```yaml
 gregwar_captcha:
   width: 160
@@ -78,9 +82,10 @@ For more information on configuration and form theming, refer to the [bundle rep
 
 ### Use with Friendly Captcha
 
-__Attention:__ This bundle currently only supports Symfony 6 and Friendly Captcha v1! Both, a PR for Symfony 7 compatibility and an information request about the future bundle development can be found in the bundle repository. 
+**Attention:** This bundle currently only supports Friendly Captcha v1!
 
 1. Install [CORS Friendly Captcha Bundle](https://github.com/cors-gmbh/friendly-captcha-bundle):
+
 ```console
 composer require cors/friendly-captcha-bundle
 ```
@@ -95,24 +100,56 @@ return [
 ```
 
 2. Visit [Friendly Captcha](https://friendlycaptcha.com), create a site key and secret key, save the keys to `.env` and link via service configuration in `config/packages/cors_friendly_captcha.yaml`:
+
 ```yaml
 cors_friendly_captcha:
-    sitekey: "%env(FRIENDLY_SITEKEY)%"
-    secret: "%env(FRIENDLY_SECRET)%"
-    use_eu_endpoints: true
+  sitekey: "%env(FRIENDLY_SITEKEY)%"
+  secret: "%env(FRIENDLY_SECRET)%"
+  use_eu_endpoints: true
 ```
 
 3. Import the widget via npm in your application or load from CDN, e.g. in `base.html.twig`:
+
 ```html
-  <script type="module" src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.module.min.js" async defer></script>
-  <script nomodule src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.min.js" async defer></script>
-``` 
+<script
+  type="module"
+  src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.module.min.js"
+  async
+  defer
+></script>
+<script
+  nomodule
+  src="https://cdn.jsdelivr.net/npm/friendly-challenge@0.9.18/widget.min.js"
+  async
+  defer
+></script>
+```
 
 For more information, refer to the [bundle repository](https://github.com/cors-gmbh/friendly-captcha-bundle).
+
+### Use with ALTCHA
+
+1. Install [AltchaBundle](https://github.com/tito10047/altcha-bundle):
+
+```console
+composer require tito10047/altcha-bundle
+```
+
+Then, enable the bundle by adding it to the list of registered bundles in the `config/bundles.php` file of your project:
+
+```php
+return [
+    //...
+    Tito10047\AltchaBundle\AltchaBundle::class => ['all' => true]
+];
+```
+
+2. Configure AltchaBundle as described in the [README.md](https://github.com/tito10047/altcha-bundle?tab=readme-ov-file#installation).
 
 ## Theming
 
 This bundle provides a minimal `theme.html.twig` which extends `@SuluForm/themes/basic.html.twig`. Use it like this:
+
 ```twig
 <body>
     {% if content.form %}
@@ -131,6 +168,7 @@ To customize the default blocks (or to customize the default blocks provided by 
 ## Scripts
 
 - To check the coding standards, run:
+
   > composer php-cs
 
 - To apply coding standards, run:

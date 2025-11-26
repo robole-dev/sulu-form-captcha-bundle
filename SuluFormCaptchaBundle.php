@@ -27,6 +27,10 @@ class SuluFormCaptchaBundle extends AbstractBundle
         if (class_exists(\CORS\Bundle\FriendlyCaptchaBundle\Form\Type\FriendlyCaptchaType::class)) {
             $loader->load('type_friendly.xml');
         }
+
+        if (class_exists(\Tito10047\AltchaBundle\Type\AltchaType::class)) {
+            $loader->load('type_altcha.xml');
+        }
     }
 
     public function prependExtension(ContainerConfigurator $containerConfigurator, ContainerBuilder $containerBuilder): void
