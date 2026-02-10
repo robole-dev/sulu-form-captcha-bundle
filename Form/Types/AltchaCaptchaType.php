@@ -23,6 +23,7 @@ class AltchaCaptchaType implements FormFieldTypeInterface
 
     public function build(FormBuilderInterface $builder, FormField $field, string $locale, array $options): void
     {
+        $options['constraints'] = new \Tito10047\AltchaBundle\Validator\Altcha();
         $builder->add($field->getKey(), \Tito10047\AltchaBundle\Type\AltchaType::class, $options);
     }
 }
