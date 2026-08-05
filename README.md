@@ -1,5 +1,6 @@
 ![GitHub release](https://flat.badgen.net/github/release/robole-dev/sulu-form-captcha-bundle)
 ![Supports Sulu 2.6 or later](https://flat.badgen.net/badge/Sulu/2.6/52B5C9?icon=php)
+![Supports Sulu 3.0 or later](https://flat.badgen.net/badge/Sulu/3.0/52B5C9?icon=php)
 
 # SuluFormCaptchaBundle
 
